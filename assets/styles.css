@@ -1,0 +1,253 @@
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+	background:#404564;
+  font-size: 16px;
+  line-height: 1.6875em;
+}
+
+body {
+  font-family:'Lato', Arial, sans-serif;
+  color: #333333;
+}
+
+canvas{
+  display: block;
+  vertical-align: bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #404564;
+  font-weight: bold;
+}
+h1, .h1 {
+  font-size: 2.625em;
+}
+h2, .h2 {
+  font-size: 2.0625em;
+}
+h3, .h3 {
+  font-size: 1.625em;
+}
+h4, .h4 {
+  font-size: 1.25em;
+}
+h5, .h5 {
+  font-size: 1em;
+}
+h6, .h6 {
+  font-size: 0.8125em;
+}
+
+b {
+  font-weight: bold;
+}
+
+.d-none {
+  display: none;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #404564;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+
+/* ---- navigation ---- */
+header nav {
+  background-color: #404564;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+header ul {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 0.75rem 0.5rem;
+}
+header li {
+  display: inline-block;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.7em;
+}
+
+.icon-social {
+  width: 1.3em;
+  height: 1.5em;
+}
+
+/* ---- nav hover animation ---- */
+.hover-effect a::before,
+.hover-effect a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.hover-effect a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.hover-effect a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.hover-effect a:hover::before,
+.hover-effect a:hover::after,
+.hover-effect a:focus::before,
+.hover-effect a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+/* ---- end nav hover animation ---- */
+
+
+/* ---- banner text ---- */
+header section {
+  position: relative;
+  font-family: Inconsolata, Courier, monospace;
+}
+#intro-text {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#intro-text:after {
+  content: "|";
+  position: relative;
+  font-size: 1.25em;
+  font-weight: 200;
+  bottom: 4px;
+  right: 6px;
+  animation: blink 1s infinite;
+  animation-delay: 3.5s;
+}
+
+/* ---- main ---- */
+main {
+  background-color: #F5F5F5;
+  padding: 1em;
+}
+
+.card {
+  border-radius: 20px;
+  border: 2px solid #384695;
+  background-color: #F5F5F5;
+  padding: 0 1rem;
+  max-width: 300px;
+}
+
+.card h3 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+.card>div {
+  margin: 1.5rem 0;
+}
+
+.card__icon-text-desc {
+  display: flex;
+  gap: 10px;
+  margin: 0.5em 0;
+}
+
+.card__icon-text {
+  display: flex;
+  gap: 10px;
+  margin: 0.5em 0;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.card__icon-text .icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+/* ---- profile card ---- */
+#profile span {
+  display: block;
+}
+
+/* ---- footer ---- */
+footer {
+  background-color: #8A97B2;
+  padding: 1rem;
+  color: black;
+}
+
+.footer__container {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ---- tablet ---- */
+@media screen and (min-width: 425px) {
+  
+}
+
+
+/* ---- desktop ---- */
+@media screen and (min-width: 768px) {
+  
+}
+
+/* ---- keyframes ---- */
+@keyframes blink {
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+}
