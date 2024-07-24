@@ -8,7 +8,6 @@
 html,body{ 
 	width:100%;
 	height:100%;
-	background:#404564;
   font-size: 16px;
   line-height: 1.6875em;
 }
@@ -150,13 +149,13 @@ header a:hover {
   padding-top: 50px;
 }
 #intro-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
   min-width: 6.7em;
   font-size: 2em;
   color: white;
-  transform: translate(-50%, -50%);
 }
 #intro-text:after {
   content: "|";
@@ -177,6 +176,8 @@ header a:hover {
 
 /* particles.js */
 #particles-js {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: #404564;
@@ -184,6 +185,7 @@ header a:hover {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 /* ---- end banner ---- */
@@ -194,7 +196,9 @@ main {
   flex-wrap: wrap;
   gap: 0.5em;
   padding: 1em;
+  margin: 1em;
   background-color: #F5F5F5;
+  border-radius: 10px;
 }
 main:before {
   content: '';
@@ -212,6 +216,7 @@ main:before {
   position: relative;
   border-radius: 20px;
   border: 2px solid #384695;
+  border-bottom: 5px solid #384695;
   background-color: #F5F5F5;
   padding: 0 1rem;
   max-width: 450px;
