@@ -24,7 +24,7 @@ canvas {
 }
 
 section {
-  margin: 1em 0 2em;
+  margin: 0 auto;
 }
 
 section h2 {
@@ -76,11 +76,12 @@ header nav {
 }
 
 header ul {
+  height: 50px;
   display: flex;
   font-weight: bold;
   justify-content: center;
+  align-items: center;
   gap: 0.5em;
-  margin: 0.75rem 0.5rem;
 }
 header li {
   display: inline-block;
@@ -143,15 +144,16 @@ header a:hover {
 
 
 /* ---- banner ---- */
-header section {
+#banner {
   position: relative;
   font-family: Inconsolata, Courier, monospace;
+  padding-top: 50px;
 }
 #intro-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 215px;
+  min-width: 6.7em;
   font-size: 2em;
   color: white;
   transform: translate(-50%, -50%);
@@ -188,14 +190,15 @@ header section {
 
 /* ---- main ---- */
 main {
-  position: relative;
-  background-color: #F5F5F5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
   padding: 1em;
-  
+  background-color: #F5F5F5;
 }
 main:before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -211,7 +214,8 @@ main:before {
   border: 2px solid #384695;
   background-color: #F5F5F5;
   padding: 0 1rem;
-  max-width: 300px;
+  max-width: 450px;
+  width: 100%;
 }
 
 .card h2 {
@@ -259,6 +263,7 @@ main:before {
 /* ---- skills section ---- */
 .skills {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
   margin-bottom: 1em;
@@ -332,12 +337,30 @@ footer nav ul {
 }
 
 /* ---- tablet ---- */
-@media screen and (min-width: 425px) {
-  
+@media screen and (min-width: 475px) {
+  #intro-text {
+    font-size: 3em;
+  }
+  main {
+    flex-wrap: nowrap;
+  }
+  #profile {
+    flex-basis: 70%;
+  }
+
+  #skills {
+    flex-basis: 30%;
+  }
 }
 
 
 /* ---- desktop ---- */
 @media screen and (min-width: 768px) {
-  
+  #intro-text {
+    font-size: 5em;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
 }
