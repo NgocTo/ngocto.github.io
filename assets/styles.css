@@ -18,9 +18,18 @@ body {
   color: #333333;
 }
 
-canvas{
+canvas {
   display: block;
   vertical-align: bottom;
+}
+
+section {
+  margin: 1em 0 2em;
+}
+
+section h2 {
+  text-align: center;
+  margin: 0.5em 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,19 +64,6 @@ b {
 }
 
 
-/* ---- particles.js container ---- */
-
-#particles-js {
-  width: 100%;
-  height: 100%;
-  background-color: #404564;
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-
 /* ---- navigation ---- */
 header nav {
   background-color: #404564;
@@ -93,6 +89,10 @@ header li {
 header a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s;
+}
+header a:hover {
+  color: #E4A5AF;
 }
 
 .icon {
@@ -101,8 +101,7 @@ header a {
 }
 
 .icon-social {
-  width: 1.3em;
-  height: 1.5em;
+  width: 1.1em;
 }
 
 /* ---- nav hover animation ---- */
@@ -140,21 +139,21 @@ header a {
     -moz-transform: translateX(0px);
     transform: translateX(0px);
 }
-
 /* ---- end nav hover animation ---- */
 
 
-/* ---- banner text ---- */
+/* ---- banner ---- */
 header section {
   position: relative;
   font-family: Inconsolata, Courier, monospace;
 }
 #intro-text {
   position: absolute;
-  color: white;
-  font-size: 2em;
-  left: 50%;
   top: 50%;
+  left: 50%;
+  min-width: 215px;
+  font-size: 2em;
+  color: white;
   transform: translate(-50%, -50%);
 }
 #intro-text:after {
@@ -168,13 +167,46 @@ header section {
   animation-delay: 3.5s;
 }
 
+@keyframes blink {
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+}
+
+/* particles.js */
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #404564;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* ---- end banner ---- */
+
 /* ---- main ---- */
 main {
+  position: relative;
   background-color: #F5F5F5;
   padding: 1em;
+  
+}
+main:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/pattern.svg");
+  background-size: 46px 37px;
+  opacity: 0.1;
 }
 
 .card {
+  position: relative;
   border-radius: 20px;
   border: 2px solid #384695;
   background-color: #F5F5F5;
@@ -182,9 +214,17 @@ main {
   max-width: 300px;
 }
 
+.card h2 {
+  background-color: #E4A5AF;
+  border-radius: 15px;
+  padding: 0.5em;
+}
+
 .card h3 {
   font-size: 1.25em;
   text-transform: uppercase;
+  border-bottom: 1.5px solid #384695;
+  margin-bottom: 0.5em;
 }
 
 .card>div {
@@ -200,7 +240,7 @@ main {
 .card__icon-text {
   display: flex;
   gap: 10px;
-  margin: 0.5em 0;
+  margin: 1em 0;
   justify-content: space-around;
   text-align: center;
 }
@@ -215,6 +255,63 @@ main {
   display: block;
 }
 
+
+/* ---- skills section ---- */
+.skills {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+.skill {
+  position: relative;
+}
+.skill .icon-background {
+  width: 100px;
+  height: 100px;
+}
+.skill .skill-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  fill: #404564;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+/* Base styling for the progress container */
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+
+.progress-circle {
+  transform: rotate(-85deg); /* Rotate the SVG to start progress from the top */
+  position: absolute;
+  top: 0;
+}
+
+.progress {
+  fill: none;
+  stroke: #DB8291;
+  stroke-width: 10;
+  stroke-dasharray: 283; /* Circumference of the circle (2 * π * radius) */
+  --progress: 0;
+   /*stroke-dashoffset: 283; Start with the stroke hidden */
+  stroke-dashoffset: calc(283 * (1 - var(--progress)));
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s ease-in-out 0.5s;
+}
+/* ---- end skills section ---- */
+
 /* ---- footer ---- */
 footer {
   background-color: #8A97B2;
@@ -224,7 +321,7 @@ footer {
 
 .footer__container {
   text-align: center;
-  max-width: 400px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -243,11 +340,4 @@ footer nav ul {
 /* ---- desktop ---- */
 @media screen and (min-width: 768px) {
   
-}
-
-/* ---- keyframes ---- */
-@keyframes blink {
-	0% {opacity: 0}
-	49%{opacity: 0}
-	50% {opacity: 1}
 }
