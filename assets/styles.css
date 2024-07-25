@@ -4,6 +4,10 @@
    ========================================================================== */
 
 /* ---- base ---- */
+:root {
+  --page-width: 70%;
+  --progress: 0;
+}
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	pointer-events: all;
@@ -74,25 +78,33 @@ a:hover {
   display: none;
 }
 
-.profile-image-container {
-  width: 7em;
-  height: 7em;
+.profile__container {
+  position: relative;
   margin: 2em 0;
+}
+.profile__image-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6em;
+  height: 6em;
   border-radius: 50%;
   border: 4px solid #DB8291;
   background-color: white;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.profile-image-container img#logo {
+.profile__contact {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  text-align: center;
+}
+.profile__image-container img#logo {
   width: 70%;
   height: 70%;
 }
 
-.profile-image-container img {
+.profile__image-container img {
   width: 100%;
   height: 100%;
 }
@@ -227,18 +239,18 @@ header a:hover {
 /* ---- main ---- */
 main {
   position: relative;
-  width: 80%;
+  width: 90%;
   background-color: #F5F5F5;
   margin: 1em auto;
-  padding: 1em;
   border-radius: 10px;
 }
 .wrap {
   position: relative;
   display: grid;
   flex-wrap: wrap;
-  gap: 0.5em;
   justify-items: center;
+  gap: 0.5em;
+  padding: 1em 0.5em;
   z-index: 0;
 }
 .wrap:before {
@@ -260,7 +272,7 @@ main {
   border: 2px solid #384695;
   border-bottom: 5px solid #384695;
   background-color: #F5F5F5;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   max-width: 450px;
 }
 
@@ -268,6 +280,7 @@ main {
   background-color: #E4A5AF;
   border-radius: 15px;
   padding: 0.5em;
+  font-size: 1.625em;
 }
 
 .card h3 {
@@ -307,16 +320,7 @@ main {
 
 
 /* ---- skills section ---- */
-#skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.skills__contact {
-  position: relative;
-  top: -35px;
-}
-.skills {
+.list-circle {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -324,14 +328,14 @@ main {
   gap: 10px;
   margin-bottom: 1em;
 }
-.skill {
+.list-circle__item {
   position: relative;
 }
-.skill .icon-background {
+.list-circle__item .icon-background {
   width: 100px;
   height: 100px;
 }
-.skill .skill-text {
+.list-circle__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -341,7 +345,7 @@ main {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -369,7 +373,6 @@ main {
   stroke: #DB8291;
   stroke-width: 10;
   stroke-dasharray: 283; /* Circumference of the circle (2 * π * radius) */
-  --progress: 0;
    /*stroke-dashoffset: 283; Start with the stroke hidden */
   stroke-dashoffset: calc(283 * (1 - var(--progress)));
   stroke-linecap: round;
@@ -389,7 +392,7 @@ main {
   -moz-transition: all 1.5s ease;
   -webkit-transition: all 1.5s ease;
 }
-.artworks__item {
+.artworks__item, .projects__item {
   position: relative;
   border-radius: 20px;
   border: 2px solid #384695;
@@ -397,13 +400,13 @@ main {
   box-shadow: 0px 2px 1px #db8291;
   transition: all 0.3s ease-in-out;
 }
-.artworks__item img {
+.artworks__item img, .project__container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 1;
 }
-.artworks__description {
+.artworks__info, .project__info {
   position: absolute;
   top: -20%;
   left: 0;
@@ -444,6 +447,32 @@ main {
 }
 /* ---- artwork section ---- */
 
+/* ---- project section ---- */
+#projects__navigation {
+  grid-row: 1 / 2;
+}
+#projects__navigation .list-circle {
+  margin: 0.5em 0;
+}
+#projects__navigation .list-circle__text {
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+#projects__navigation .progress-container {
+  width: 60px;
+  height: 60px;
+}
+#web, #unity, #java, #cpp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.project__container img {
+  object-fit: contain;
+}
+/* ---- end project section ---- */
+
 /* ---- footer ---- */
 footer {
   position: relative;
@@ -465,20 +494,29 @@ footer nav ul {
 }
 
 /* ---- tablet ---- */
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 450px) {
   #intro-text {
     font-size: 3em;
   }
   .wrap {
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content 1fr;
     grid-template-rows: auto 1fr;
   }
-  #profile, #artworks {
+  #profile, #artworks, #projects, #about {
     grid-row: 1 / 3;
     grid-column: 2 / 3;
   }
-  .skills.column {
+  .list-circle.column {
     flex-direction: column;
+  }
+  #projects__navigation {
+    position: fixed;
+    top: 0;
+    left: calc(15% + 1em);
+  }
+  
+  .list-circle__text {
+    font-size: 1.1em;
   }
 }
 
@@ -489,14 +527,19 @@ footer nav ul {
     font-size: 5em;
   }
   main {
-    width: 70%;
+    width: 85%;
   }
   .wrap {
+    grid-template-columns: auto auto;
     max-width: 1000px;
     margin: 1rem auto;
+    padding: 1rem;
   }
   .wrap__art-page {
     max-width: initial;
+  }
+  .card {
+    padding: 1rem;
   }
   .artworks__container {
     grid-template-columns: auto auto;
@@ -505,11 +548,19 @@ footer nav ul {
   .artworks__item.full {
     grid-column: 1 / 3;
   }
+  
+  .profile__image-container  {
+    width: 8em;
+    height: 8em;
+  }
 }
 
 
 /* ---- desktop ---- */
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 1045px) {
+  main {
+    width: 80%;
+  }
   .artworks__container {
     grid-template-columns: auto auto auto;
   }
@@ -524,5 +575,11 @@ footer nav ul {
   .artworks__item.full.six {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
+  }
+  .card {
+    padding: 1rem 2rem;
+  }
+  .wrap__art-page .card {
+    padding: 1rem;
   }
 }

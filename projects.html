@@ -39,8 +39,91 @@
     </nav>
   </header>
   <main>
-    <div class="wrap">
-      
+    <div class="wrap wrap__art-page">
+      <section id="projects" class="card">
+        <h2>My Projects</h2>
+        <div id="web">
+          <div class="project__container">
+            <a href="https://github.com/NgocTo/kdh">
+              <img src="images/web-hospital.png" alt="">
+              <div class="project__info">ASP.NET</div>
+            </a>
+          </div>
+          <div class="project__container">
+            <a href="https://ngocto.github.io/CSS-Animation/">
+              <img src="images/web-animation.png" alt="">
+              <div class="project__info">CSS Animation</div>
+            </a>
+          </div>
+        </div>
+        <div id="unity">
+          <div class="project__container">
+            <a href="https://narynne.itch.io/candyland">
+              <img src="images/unity-candyland.png" alt="">
+              <div class="project__info">Candy Land</div>
+            </a>
+          </div>
+          <div class="project__container">
+            <a href="https://narynne.itch.io/shipassault">
+              <img src="images/unity-shipassault.png" alt="">
+              <div class="project__info">Ship Assault</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects__navigation">
+        
+        <div class="card">
+          <h2 class="d-none">Languages</h2>
+          <div class="list-circle column">
+            <div class="list-circle__item">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="list-circle__text">Web App</p>
+              </div>
+            </div>
+            <div class="list-circle__item">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="list-circle__text">Unity</p>
+              </div>
+            </div>
+            <div class="list-circle__item">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="list-circle__text">Java</p>
+              </div>
+            </div>
+            <div class="list-circle__item">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="list-circle__text">C++</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -83,6 +166,8 @@
   </footer>
   
   <!-- JS -->
+  <script src="assets/lib/particles.min.js"></script>
+  <script src="assets/app.js"></script>
   <script src="assets/scripts.js"></script>
   
 </body>
