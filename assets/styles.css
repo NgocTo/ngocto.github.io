@@ -119,7 +119,7 @@ header li {
   display: inline-block;
 }
 
-header a {
+header a, header a:visited {
   text-decoration: none;
   color: white;
   transition: color 0.3s;
