@@ -4,6 +4,10 @@
    ========================================================================== */
 
 /* ---- base ---- */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	pointer-events: all;
+}
 
 html,body{ 
 	width:100%;
@@ -15,6 +19,8 @@ html,body{
 body {
   font-family:'Lato', Arial, sans-serif;
   color: #333333;
+  padding-top: 50px;
+  pointer-events: none;
 }
 
 canvas {
@@ -58,21 +64,28 @@ b {
   display: none;
 }
 
-.logo-container {
-  width: 5em;
-  height: 5em;
-  padding: 2em;
+.profile-image-container {
+  width: 7em;
+  height: 7em;
   margin: 2em 0;
   border-radius: 50%;
   border: 4px solid #DB8291;
   background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#logo {
+.profile-image-container img#logo {
+  width: 70%;
+  height: 70%;
+}
+
+.profile-image-container img {
   width: 100%;
   height: 100%;
 }
-
 
 /* ---- navigation ---- */
 header nav {
@@ -157,7 +170,7 @@ header a:hover {
 #banner {
   position: relative;
   font-family: Inconsolata, Courier, monospace;
-  padding-top: 50px;
+  pointer-events: none;
 }
 #intro-text {
   display: flex;
@@ -196,24 +209,25 @@ header a:hover {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  z-index: -1;
+  pointer-events: all;
 }
 
 /* ---- end banner ---- */
 
 /* ---- main ---- */
-main {
-  position: relative;
-  width: 80%;
+.wrap {
   display: grid;
   flex-wrap: wrap;
   gap: 0.5em;
-  padding: 1em;
-  margin: 1em auto;
-  background-color: #F5F5F5;
-  border-radius: 10px;
   justify-items: center;
-  z-index: 0;
+}
+main {
+  position: relative;
+  width: 80%;
+  background-color: #F5F5F5;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 10px;
 }
 main:before {
   content: '';
@@ -290,8 +304,12 @@ main:before {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content: center;
   gap: 10px;
   margin-bottom: 1em;
+}
+.skills.column {
+  flex-direction: column;
 }
 .skill {
   position: relative;
@@ -342,11 +360,45 @@ main:before {
 }
 /* ---- end skills section ---- */
 
+/* ---- artwork section ---- */
+#artworks {
+  max-width: initial;
+}
+.artworks__container {
+  display: grid;
+  gap: 1em;
+  transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  -webkit-transition: all 1.5s ease;
+}
+.artworks__item {
+  border-radius: 20px;
+  border: 2px solid #384695;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px #db8291;
+}
+.artworks__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.artworks-heading {
+  text-transform: uppercase;
+  font-size:1.2em;
+  font-weight:bold;
+  line-height: 2em;
+  bottom:0;
+  background-color: #ffffff;
+}
+/* ---- artwork section ---- */
+
 /* ---- footer ---- */
 footer {
-  background-color: #8A97B2;
+  position: relative;
   padding: 1rem;
   color: black;
+  background-color: #8A97B2;
 }
 
 .footer__container {
@@ -366,24 +418,57 @@ footer nav ul {
   #intro-text {
     font-size: 3em;
   }
-  main {
+  .wrap {
     grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
   }
-  #profile {
+  #profile, #artworks {
     grid-row: 1 / 3;
     grid-column: 2 / 3;
   }
 }
 
 
-/* ---- desktop ---- */
+/* ---- laptop ---- */
 @media screen and (min-width: 768px) {
   #intro-text {
     font-size: 5em;
   }
   main {
+    width: 70%;
+  }
+  .wrap {
     max-width: 1000px;
-    margin: 2rem auto;
+    margin: 1rem auto;
+  }
+  .wrap__art-page {
+    max-width: initial;
+  }
+  .artworks__container {
+    grid-template-columns: auto auto;
+  }
+
+  .artworks__item.full {
+    grid-column: 1 / 3;
+  }
+}
+
+
+/* ---- desktop ---- */
+@media screen and (min-width: 968px) {
+  .artworks__container {
+    grid-template-columns: auto auto auto;
+  }
+
+  .artworks__item.full {
+    grid-column: 1 / 4;
+  }
+  .artworks__item.full.third {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  .artworks__item.full.six {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
   }
 }

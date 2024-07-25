@@ -23,6 +23,8 @@
   
 </head>
 <body>
+  <!-- particles.js container -->
+  <div id="particles-js"></div>
   <header>
     <h1 class="d-none">Ngoc To</h1>
     <nav role="navigation" >
@@ -36,7 +38,92 @@
     </nav>
   </header>
   <main>
-    
+    <div class="wrap wrap__art-page">
+      <div class="profile-image-container">
+        <img src="images/OC-Nari.jpg" alt="original character">
+      </div>
+      <section id="artworks" class="card">
+        <h2>-•- My Artworks -•-</h1>
+        <div class="artworks__container">
+          <div class="artworks__item half">
+            <img src="images/OC-Daphie.jpg" alt="original character">
+          </div>
+          <div class="artworks__item half">
+            <img src="images/Roki-Eve.jpg" alt="song cover">
+          </div>
+          <div class="artworks__item full">
+            <img src="images/OC-Nichijou-Full.jpg" alt="original characters">
+          </div>
+          <div class="artworks__item full third">
+            <img src="images/Gnonno-ForAeteku.jpg" alt="fanart">
+          </div>
+          <div class="artworks__item full">
+            <img src="images/OC-meeting.jpg" alt="original character">
+          </div>
+          <div class="artworks__item half">
+            <img src="images/OC-Lina.png" alt="original character">
+          </div>
+          <div class="artworks__item half">
+            <img src="images/OC-Eve-M.jpg" alt="original character">
+          </div>
+          <div class="artworks__item full third six">
+            <img src="images/Evebeam.jpg" alt="fanart">
+          </div>
+        </div>
+      </section>
+        
+      <section id="skills">
+        <div class="card">
+          <h2>Tools</h2>
+          <div class="skills column">
+            <div class="skill">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0.85"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="skill-text">Ps</p>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0.95"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="skill-text">Ai</p>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0.9"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="skill-text">CSP</p>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="progress-container">
+                <svg viewBox="0 0 100 100" class="progress-circle">
+                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0.9"/>
+                </svg>
+                <svg class="icon icon-background" aria-hidden="true" focusable="false">
+                  <use href="images/icons.svg#icon-background"></use>
+                </svg>
+                <p class="skill-text">SAI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -78,6 +165,8 @@
   </footer>
   
   <!-- JS -->
+  <script src="assets/lib/particles.min.js"></script>
+  <script src="assets/app.js"></script>
   <script src="assets/scripts.js"></script>
   
 </body>
