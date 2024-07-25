@@ -215,12 +215,6 @@ header a:hover {
 /* ---- end banner ---- */
 
 /* ---- main ---- */
-.wrap {
-  display: grid;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  justify-items: center;
-}
 main {
   position: relative;
   width: 80%;
@@ -228,6 +222,14 @@ main {
   margin: 1em auto;
   padding: 1em;
   border-radius: 10px;
+}
+.wrap {
+  position: relative;
+  display: grid;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-items: center;
+  z-index: 0;
 }
 .wrap:before {
   content: '';
@@ -239,6 +241,7 @@ main {
   background-image: url("../images/pattern.svg");
   background-size: 46px 37px;
   opacity: 0.1;
+  z-index: -1;
 }
 
 .card {
