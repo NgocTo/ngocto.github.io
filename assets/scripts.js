@@ -1,7 +1,10 @@
 // Typewriter effect
-setTimeout(()=> {
-  typeWriter("Hello World ", "#intro-text", 0);
-}, 500)
+let introText = document.querySelector("#intro-text");
+if (introText != undefined) {
+  setTimeout(()=> {
+    typeWriter("Hello World ", introText, 0);
+  }, 500)
+}
 
 // Skill progress/efficiency
 setProgress();
@@ -16,7 +19,7 @@ function setProgress() {
 
 function typeWriter(text, container, i) {
   if (i < text.length) {
-    document.querySelector(container).innerHTML += text.charAt(i);
+    container.innerHTML += text.charAt(i);
     i++;
     setTimeout(() => {
       typeWriter(text, container, i);
