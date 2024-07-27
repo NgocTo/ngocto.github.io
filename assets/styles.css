@@ -7,6 +7,7 @@
 :root {
   --page-width: 70%;
   --progress: 0;
+  scroll-behavior: smooth;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -208,7 +209,7 @@ header a:hover {
   position: relative;
   font-size: 1.25em;
   font-weight: 200;
-  bottom: 10px;
+  bottom: 5px;
   right: 6px;
   animation: blink 1s infinite;
   animation-delay: 3.5s;
@@ -381,7 +382,7 @@ main {
 /* ---- end skills section ---- */
 
 /* ---- artwork section ---- */
-#artworks {
+#artworks, #projects {
   max-width: initial;
 }
 .artworks__container {
@@ -422,17 +423,20 @@ main {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.artworks__item:hover {
+.artworks__item:hover, 
+.project__container:hover {
   transform: scale(1.05);
 }
-.artworks__item:hover .artworks__description {
+.artworks__item:hover .artworks__info,
+.project__container:hover .project__info {
   top: 10%;
   opacity: 1;
 }
-.artworks__item:hover img {
+.artworks__item:hover img,
+.project__container:hover img  {
 	animation: flash 1.5s;
 }
-.artworks__description b {
+.artworks__info b {
   display: block;
   font-weight: bold;
   font-size: 1.25em;
@@ -445,7 +449,7 @@ main {
 		opacity: 1;
 	}
 }
-/* ---- artwork section ---- */
+/* ---- end artwork section ---- */
 
 /* ---- project section ---- */
 #projects__navigation {
@@ -494,9 +498,12 @@ footer nav ul {
 }
 
 /* ---- tablet ---- */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 425px) {
   #intro-text {
     font-size: 3em;
+  }
+  #intro-text:after {
+    bottom: 8px;
   }
   .wrap {
     grid-template-columns: min-content 1fr;
@@ -510,9 +517,8 @@ footer nav ul {
     flex-direction: column;
   }
   #projects__navigation {
-    position: fixed;
-    top: 0;
-    left: calc(15% + 1em);
+    position: sticky;
+    top: 10%;
   }
   
   .list-circle__text {
@@ -526,6 +532,9 @@ footer nav ul {
   #intro-text {
     font-size: 5em;
   }
+  #intro-text:after {
+    bottom: 10px;
+  }
   main {
     width: 85%;
   }
@@ -534,6 +543,9 @@ footer nav ul {
     max-width: 1000px;
     margin: 1rem auto;
     padding: 1rem;
+  }
+  .wrap__project-page {
+    grid-template-columns: min-content auto;
   }
   .wrap__art-page {
     max-width: initial;
