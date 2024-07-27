@@ -40,30 +40,39 @@
   </header>
   <main>
     <div class="wrap wrap__project-page">
-      <section id="projects" class="card">
-        <h2>My Projects</h2>
-        <div id="web">
-          <div class="project__container">
+      <section id="projects">
+        <h2 class="d-none">My Projects</h2>
+        <div id="web" class="project__container card">
+          <h3>Web Development</h3>
+          <div class="project__item">
             <a href="https://github.com/NgocTo/kdh" target="_blank">
-              <img src="images/web-hospital.png" alt="">
-              <div class="project__info">ASP.NET</div>
+              <img src="images/web-hospital.png" alt="hospital project responsive image">
+              <div class="project__info">
+                <h4 class="project__title">Humber District Hospital</h3>
+                <p>A group project that allowed us to practice and improve the existing design and functionality of Kirkland District Hospital website.</p>
+                <p>Languages: C# ASP.NET</p>
+              </div>
             </a>
           </div>
-          <div class="project__container">
+          <div class="project__item">
             <a href="https://ngocto.github.io/CSS-Animation/" target="_blank">
-              <img src="images/web-animation.png" alt="">
-              <div class="project__info">CSS Animation</div>
+              <img src="images/web-animation.png" alt="animation project responsive image">
+              <div class="project__info">
+                <h4 class="project__title">Animation</h4>
+                <p>CSS Animation and Transition practice. Try clicking the sky!</p>
+                <p>Languages: HTML CSS JS</p>
+              </div>
             </a>
           </div>
         </div>
-        <div id="unity">
-          <div class="project__container">
+        <div id="unity" class="project__container card">
+          <div class="project__item">
             <a href="https://narynne.itch.io/candyland" target="_blank">
               <img src="images/unity-candyland.png" alt="">
               <div class="project__info">Candy Land</div>
             </a>
           </div>
-          <div class="project__container">
+          <div class="project__item">
             <a href="https://narynne.itch.io/shipassault" target="_blank">
               <img src="images/unity-shipassault.png" alt="">
               <div class="project__info">Ship Assault</div>
@@ -71,31 +80,18 @@
           </div>
         </div>
       </section>
-
+      <!-- Projects Navigation -->
       <section id="projects__navigation">
-        
         <div class="card">
           <h2 class="d-none">Languages</h2>
           <div class="list-circle column">
             <a class="list-circle__item" href="#web">
               <div class="progress-container">
-                <svg viewBox="0 0 100 100" class="progress-circle">
-                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
-                </svg>
-                <svg class="icon icon-background" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-background"></use>
-                </svg>
                 <p class="list-circle__text">Web App</p>
               </div>
             </a>
             <a class="list-circle__item" href="#unity">
               <div class="progress-container">
-                <svg viewBox="0 0 100 100" class="progress-circle">
-                  <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
-                </svg>
-                <svg class="icon icon-background" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-background"></use>
-                </svg>
                 <p class="list-circle__text">Unity</p>
               </div>
             </a>
@@ -104,9 +100,6 @@
                 <svg viewBox="0 0 100 100" class="progress-circle">
                   <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
                 </svg>
-                <svg class="icon icon-background" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-background"></use>
-                </svg>
                 <p class="list-circle__text">Java</p>
               </div>
             </a>
@@ -114,9 +107,6 @@
               <div class="progress-container">
                 <svg viewBox="0 0 100 100" class="progress-circle">
                   <circle cx="50" cy="50" r="45" class="progress" data-efficiency="0"/>
-                </svg>
-                <svg class="icon icon-background" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-background"></use>
                 </svg>
                 <p class="list-circle__text">C++</p>
               </div>
