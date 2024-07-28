@@ -9,6 +9,27 @@ if (introText != undefined) {
 // Skill progress/efficiency
 setProgress();
 
+
+// Show/hide project description
+let showTriggers = document.querySelectorAll('.project__title');
+if (showTriggers.length > 0) {
+  showTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function() {
+      let projectDescription = this.parentNode.querySelector('.project__description');
+      let icon = trigger.querySelector('.icon');
+      if (projectDescription.classList.contains('expand')) {
+        icon.classList.remove('up');
+        projectDescription.classList.remove('expand');
+        projectDescription.style.height = 0;
+      } else {
+        icon.classList.add('up');
+        projectDescription.classList.add('expand');
+        projectDescription.style.height = projectDescription.scrollHeight + 'px';
+      }
+    });
+  });
+}
+
 function setProgress() {
   let progressBars = document.querySelectorAll('.progress');
   progressBars.forEach(progressBar => {
