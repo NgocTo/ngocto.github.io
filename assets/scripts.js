@@ -30,6 +30,19 @@ if (showTriggers.length > 0) {
   });
 }
 
+// Scroll animation
+let progressBar = document.querySelector('.timeline__progress');
+if (progressBar != undefined) {
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.scrollY;
+    let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    let progressHeight = (scrollTop / docHeight) * 100;
+
+    // Update the progress bar height
+    progressBar.style.height = `${progressHeight}%`;
+  });
+}
+
 function setProgress() {
   let progressBars = document.querySelectorAll('.progress');
   progressBars.forEach(progressBar => {

@@ -533,6 +533,37 @@ main {
 }
 /* ---- end project section ---- */
 
+/* ---- about page ---- */
+.wrap.wrap__about-page {
+  grid-template-columns: auto;
+}
+.timeline__container {
+  position: relative;
+  margin-left: 1.5rem;
+}
+.timeline__progress-container {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #384695;
+  overflow: hidden;
+  z-index: 1;
+}
+.timeline__progress {
+  height: 0vh;
+  width: 5px;
+  border-radius: 2px;
+  background-color: #8A97B2;
+}
+.timeline__item {
+  max-width: 600px;
+  margin: 1rem 0;
+}
 /* ---- footer ---- */
 footer {
   position: relative;
@@ -633,9 +664,10 @@ footer a, footer a:visited {
     flex-direction: initial;
     flex-wrap: wrap;
     max-width: initial;
+    justify-content: space-between;
   }
   .project__item {
-    flex-basis: 49%;
+    flex-basis: 47%;
   }
 }
 @media screen and (min-width: 1045px) {
