@@ -11,21 +11,24 @@ setProgress();
 
 
 // Show/hide project description
-let showTriggers = document.querySelectorAll('.project__title');
-if (showTriggers.length > 0) {
-  showTriggers.forEach(trigger => {
+const tabTriggers = document.querySelectorAll('.tab__link');
+if (tabTriggers.length > 0) {
+  tabTriggers.forEach(trigger => {
     trigger.addEventListener('click', function() {
-      let projectDescription = this.parentNode.querySelector('.project__description');
-      let icon = trigger.querySelector('.icon');
-      if (projectDescription.classList.contains('expand')) {
-        icon.classList.remove('up');
-        projectDescription.classList.remove('expand');
-        projectDescription.style.height = 0;
-      } else {
-        icon.classList.add('up');
-        projectDescription.classList.add('expand');
-        projectDescription.style.height = projectDescription.scrollHeight + 'px';
-      }
+      const container = this.parentNode.parentNode;
+      const tabContents = container.querySelectorAll('.tab__content');
+      tabContents.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      tabTriggers.forEach(trigger => {
+        trigger.classList.remove('active');
+      })
+
+      let target = trigger.dataset.trigger;
+      let tabContent = container.querySelector(`.tab__content[data-target=${target}]`);
+        tabContent.classList.add('active');
+        trigger.classList.add('active');
     });
   });
 }

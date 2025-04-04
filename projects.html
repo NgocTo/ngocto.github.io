@@ -41,43 +41,101 @@
     <div class="wrap wrap__project-page">
       <section id="projects">
         <h2 class="d-none">My Projects</h2>
-        <div id="web" class="project__container card">
+        <div id="web" class="project__container">
           <h3>Web Application</h3>
-          <div class="project__item">
-            <a href="https://github.com/NgocTo/kdh" target="_blank">
-              <img src="images/web-hospital.png" alt="responsive image of hospital project">
-            </a>
+          <div class="project__item card">
+            <h4 class="project__title">Helpdesk</h4>
+            <div class="pills">
+              <div class="pill">ASP.NET</div>
+              <div class="pill">C#</div>
+            </div>
             <div class="project__info">
-              <h4 class="project__title">
-                Humber District Hospital
-                <svg class="icon project__expand-button" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-arrow-down"></use>
-                </svg>
-              </h4>
-              <div class="project__description">
-                <p>A group project that allowed us to practice and improve the existing design and functionality of Kirkland District Hospital website.</p>
-                <p>Languages: C# ASP.NET</p>
+              <img src="images/web-helpdesk.jpg" alt="responsive image of helpdesk project">
+            </div>
+            <div class="project__info">
+              <div class="tab">
+                <div class="tab__links">
+                  <div class="tab__link active" data-trigger="overview">Overview</div>
+                  <div class="tab__link" data-trigger="feature">MVP Features</div>
+                  <div class="tab__link" data-trigger="challenge">Challenges & Solutions</div>
+                </div>
+                <div class="tab__content active" data-target="overview">
+                  <p>This project is a basic <b>Help Desk website</b> that allows for employee and reports management. It was developed to practice the <b>Model-View-Controller (MVC) architecture</b> in ASP.NET Core while integrating <b>asynchronous JavaScript</b> for dynamic interactions.</p>
+                  <p>The project is deployed on <b>Microsoft Azure</b></p>
+                </div>
+                <div class="tab__content" data-target="feature">
+                  <ul>
+                    <li>Employee & Report Management systems</li>
+                    <li>ASP.NET MVC architecture for structured development</li>
+                    <li>Scaffolded authentication with Razor Pages and third-party Google OAuth</li>
+                    <li>PDF Report Generation using ASP.NET Core</li>
+                  </ul>
+                </div>
+                <div class="tab__content" data-target="challenge">
+                  <h5 class="tab__title">Understanding Syntax and Learning by Doing</h5>
+                  <p><b>Challenges: </b>Since it had been about five years since I last worked on a C# project, I did not remember the syntax and and the project was totally a relearning process. Furthermore, at that time, I didn't have the core programming knowledge necessary for working with frameworks like ASP.NET.</p>
+                  <p><b>Solutions: </b>To overcome this, I re-familiarized myself with ASP.NET by building the project step by step, typing out code line by line and referencing official documentation whenever I encountered parts I didn't understand. This approach helped me <b>rebuild my programming fundamentals with the ASP.NET framework</b> and <b>strengthen my understanding of its structure.</b></p>
+                  
+                  <h5 class="tab__title">Implementing Authentication Beyond Course Requirements</h5>
+                  <p><b>Challenges: </b>Wanting to challenge myself further, I decided to implement user authentication - a feature not required by the course. Working with OAuth login was overwhelming, and the biggest issue was me being afraid of breaking the project structure.</p>
+                  <p><b>Solutions: </b>To tackle this, I sought guidance from my professor, who helped me understand the necessary configurations with namespace. With this support, I successfully added a basic user account flow. Eventually, I managed to integrate <b>Google OAuth login</b> into the project</p>
+                  <p>Even though I couldn't implement other platforms like Twitter, Instagram, or Facebook due to more complex approval processes, researching different OAuth workflows for various platforms was a valuable learning experience.</p>
+                </div>
+                
               </div>
             </div>
-          </div>
-          <div class="project__item">
-            <a href="https://nthelpdesk.azurewebsites.net/" target="_blank">
-              <img src="images/web-helpdesk.jpg" alt="responsive image of hospital project">
-            </a>
-            <div class="project__info">
-              <h4 class="project__title">
-                Helpdesk
-                <svg class="icon project__expand-button" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-arrow-down"></use>
-                </svg>
-              </h4>
-              <div class="project__description">
-                <p>A basic help desk website that allows for employee and reports management.</p>
-                <p>Languages: C# ASP.NET</p>
-              </div>
+            
+            <div class="project__info project__links">
+              <a href="https://github.com/NgocTo/Helpdesk" target="_blank">Github</a>
+              <a href="https://nthelpdesk.azurewebsites.net/" target="_blank">See project</a>
             </div>
           </div>
-          <div class="project__item">
+          <div class="project__item card">
+            <h4 class="project__title">Humber District Hospital</h4>
+            <div class="pills">
+              <div class="pill">ASP.NET</div>
+              <div class="pill">C#</div>
+            </div>
+            <div class="project__info">
+              <img src="images/web-khd.png" alt="responsive image of hospital project">
+              <img src="images/web-khd-wireframe.png" alt="wireframe of hospital project">
+            </div>
+            <div class="project__info">
+              <div class="tab">
+                <div class="tab__links">
+                  <div class="tab__link active" data-trigger="overview">Overview</div>
+                  <div class="tab__link" data-trigger="feature">MVP Features</div>
+                  <div class="tab__link" data-trigger="challenge">Challenges & Solutions</div>
+                </div>
+                <div class="tab__content active" data-target="overview">
+                  <p>This group project, combining skills from both our Programming and Project Management classes, aimed to analyze and improve the existing Kirkland District Hospital website. In the project planning phase, we identified key flaws of the current website and the work flow, including difficulty to use the hospital services, lack of staff-patient interaction, poor UI, and workflow inefficiencies. As a result, we implemented targeted improvements to <b>enhance the website's functionality, usability, and overall efficiency</b>, applying both technical and strategic project management principles.</p>
+                </div>
+                <div class="tab__content" data-target="feature">
+                  <ul>
+                    <li>Content Management System</li>
+                    <li>Staff and Patient portal</li>
+                    <li>Customer Relations Management (Automated emails, communication with patients and donors)</li>
+                    <li>E-Commerce (for hospital bills)</li>
+                    <li>FAQ</li>
+                    <li>Giftshop</li>
+                    <li>Donation</li>
+                    <li>Job Opportunities</li>
+                    <li>Testimonial</li>
+                  </ul>
+                  <p>I'm responsible for the Staff and Patient portal, as well as the Testimonial feature in this project.</p>
+                </div>
+                <div class="tab__content" data-target="challenge">
+                  <p><b>Challenges: </b>As a foreign student and being new to programming, I initially struggled with understanding technical concepts and implementing complex features.</p>
+                  <p><b>Solutions: </b>To overcome this, I openly communicated with my teammates and took on basic feature development tasks while actively learning more about how to code from them. On the other hand, I actively contributed in wireframing and design to the project, ensuring a balanced and collaborative effort.</p>
+                </div>
+              </div>
+            </div>
+            <div class="project__info project__links">
+              <a href="https://github.com/NgocTo/kdh" target="_blank">Github</a>
+              <a href="https://humberdistricthospital.azurewebsites.net/" target="_blank">See project</a>
+            </div>
+          </div>
+          <div class="project__item card">
             <a href="https://ngocto.github.io/CSS-Animation/" target="_blank">
               <img src="images/web-animation.png" alt="responsive image of animation project">
             </a>
@@ -95,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div id="unity" class="project__container card">
+        <div id="unity" class="project__container card hide">
           <h3>Unity</h3>
           <div class="project__item">
             <a href="https://narynne.itch.io/candyland" target="_blank">
@@ -131,7 +189,7 @@
           </div>
         </div>
         
-        <div id="java" class="project__container card">
+        <div id="java" class="project__container card hide">
           <h3>Java</h3>
           <div class="project__item">
             <a>
@@ -150,7 +208,7 @@
             </div>
           </div>
         </div>
-        <div id="cpp" class="project__container card">
+        <div id="cpp" class="project__container card hide">
           <h3>C++</h3>
             <p class="center">Coming Soon...</p>
         </div>

@@ -141,6 +141,27 @@ a, a:visited {
 a:hover {
   color: #9E2E3F;;
 }
+/* ---- PILL ---- */
+.pills {
+  margin: 0.5rem;
+  text-align: right;
+}
+
+.pill {
+  display: inline-block;
+  min-width: 30px;
+  border-radius: 10px;
+  padding: 3px 15px;
+  margin: 5px;
+  text-align: center;
+  color: black;
+  background-color: #e4a5af;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .d-none {
   display: none;
@@ -230,6 +251,57 @@ header a:hover {
 
 .icon-social {
   width: 1.1em;
+}
+
+/* ---- tab ---- */
+.tab {
+  margin-bottom: 1rem;
+}
+.tab__links {
+  background-color: lightgray;
+}
+
+.tab__link {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color .2s;
+  font-weight: bold;
+  font-family: 'Noto Serif', Cambria, serif;
+}
+
+.tab__link.active {
+  background-color: #F5F5F5;
+}
+
+
+.tab__link:hover {
+  background-color: #e5e5e5;
+}
+
+.tab__content {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: opacity .5s;
+}
+
+.tab__content.active {
+  opacity: 1;
+  visibility: visible;
+  height: initial;
+  padding: 0.5rem 1rem;
+}
+
+.tab__title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tab__content li {
+  list-style: circle;
+  margin-left: 1rem;
 }
 
 /* ---- nav hover animation ---- */
@@ -370,10 +442,6 @@ main:before {
   margin-bottom: 0.5em;
 }
 
-.card>div {
-  margin: 1.5rem 0;
-}
-
 .card__icon-text-desc {
   display: flex;
   gap: 10px;
@@ -461,7 +529,7 @@ main:before {
 /* ---- end skills section ---- */
 
 /* ---- artwork section ---- */
-#artworks, #projects {
+#artworks {
   max-width: initial;
 }
 .artwork__container {
@@ -507,8 +575,7 @@ main:before {
   top: 10%;
   opacity: 1;
 }
-.artwork__item:hover img,
-.project__item:hover img  {
+.artwork__item:hover img  {
 	animation: flash 1.5s;
 }
 .artwork__info b {
@@ -528,26 +595,24 @@ main:before {
 
 /* ---- project section ---- */
 #projects {
+  width: 100%;
   scroll-snap-type: y mandatory;
 }
 .project__container {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  align-items: start;
   scroll-snap-align: start;
   margin-bottom: 4rem;
 }
-.card .project__item {
+
+.card.project__item {
   margin: 0.5rem 0;
+  padding: 0;
+  max-width: initial;
 }
 .project__item a {
   display: block;
 }
 .project__info {
-  padding: 0.1rem 1rem;
-  color: white;
-  background-color: #404564;
+  margin: 1.5rem 3rem;
 }
 .project__container h3 {
   border-bottom: none;
@@ -556,14 +621,15 @@ main:before {
   border-radius: 10px;
   padding: 0.5rem;
   text-align: center;
-  flex-basis: 100%;
 }
 .project__title {
+  padding: 0.7rem;
   font-family:'Lato', Arial, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #404564;
   cursor: pointer;
 }
 .project__title .icon {
@@ -572,20 +638,25 @@ main:before {
 .project__info p {
   margin-bottom: 5px;
 }
-.project__expand-button {
-  transition: transform 0.3s ease-in-out;
+.project__links {
+  text-align: center;
 }
-.project__expand-button.up {
-  transform: rotate(180deg);
+.project__links a {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: black;
+  background-color: #e4a5af;
+  border: 2px solid #404564;
+  opacity: 1;
 }
-.project__description {
-  height: 0;
-  transition: height 0.3s;
-  overflow: hidden;
+.project__links a:hover {
+  animation: flash 1.5s;
 }
-.project__container img {
-  height: 250px;
-}
+
 #projects__navigation {
   position: sticky;
   width: 100%;
@@ -760,12 +831,6 @@ footer a, footer a:visited {
 @media screen and (min-width: 910px) {
   .wrap {
     padding: 4rem 1rem;
-  }
-  .project__container {
-    flex-direction: initial;
-    flex-wrap: wrap;
-    max-width: initial;
-    justify-content: space-between;
   }
   .project__item {
     flex-basis: 47%;
