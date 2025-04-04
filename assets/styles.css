@@ -152,7 +152,7 @@ a:hover {
 
 .profile__container {
   position: relative;
-  margin: 2em 0;
+  margin: 3.5em 0;
 }
 .profile__image-container  {
   display: flex;
@@ -168,8 +168,18 @@ a:hover {
 .profile__contact {
   position: absolute;
   width: 100%;
-  bottom: -25px;
+  bottom: -60px;
   text-align: center;
+}
+
+.profile__contact a {
+  text-decoration: none;
+}
+
+.profile__contact .icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0.1em 0.8em;
 }
 .profile__image-container img#logo {
   width: 70%;
@@ -771,6 +781,12 @@ footer a, footer a:visited {
 
   .artwork__item.full {
     grid-column: 1 / 4;
+  }
+  .artwork__item.two-third {
+    grid-column: 1 / 3;
+  }
+  .artwork__item.two-third.shift {
+    grid-column: 2 / 4;
   }
   .artwork__item.full.third {
     grid-column: 3 / 4;
