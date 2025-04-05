@@ -10,12 +10,28 @@ if (introText != undefined) {
 setProgress();
 
 
+// Show/hide category
+const categoryTriggers = document.querySelectorAll('.list-circle__item')
+const categories = document.querySelectorAll('.project__container');
+categoryTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    let target = trigger.dataset.trigger;
+    categories.forEach((category) => {
+      if (category.dataset.target === target) {
+        category.classList.remove('hide');
+      } else {
+        category.classList.add('hide');
+      }
+    });
+  })
+});
+
 // Show/hide project description
 const tabTriggers = document.querySelectorAll('.tab__link');
 if (tabTriggers.length > 0) {
   tabTriggers.forEach(trigger => {
-    trigger.addEventListener('click', function() {
-      const container = this.parentNode.parentNode;
+    trigger.addEventListener('click', () => {
+      const container = trigger.parentNode.parentNode;
       const tabContents = container.querySelectorAll('.tab__content');
       tabContents.forEach(tab => {
         tab.classList.remove('active');
