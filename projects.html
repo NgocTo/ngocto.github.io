@@ -136,20 +136,42 @@
             </div>
           </div>
           <div class="project__item card">
-            <a href="https://ngocto.github.io/CSS-Animation/" target="_blank">
+            <h4 class="project__title">CSS Animation</h4>
+            <div class="pills">
+              <div class="pill">HTML</div>
+              <div class="pill">CSS</div>
+              <div class="pill">JS</div>
+            </div>
+            <a href="" target="_blank">
               <img src="images/web-animation.png" alt="responsive image of animation project">
             </a>
             <div class="project__info">
-              <h4 class="project__title">
-                Animation
-                <svg class="icon project__expand-button" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-arrow-down"></use>
-                </svg>
-              </h4>
-              <div class="project__description">
-                <p>CSS Animation and Transition practice. Try clicking the sky!</p>
-                <p>Languages: HTML CSS JS</p>
+              <div class="tab">
+                <div class="tab__links">
+                  <div class="tab__link active" data-trigger="overview">Overview</div>
+                  <div class="tab__link" data-trigger="feature">MVP Features</div>
+                  <div class="tab__link" data-trigger="challenge">Challenges & Solutions</div>
+                </div>
+                <div class="tab__content active" data-target="overview">
+                  <p>This project is a fun project on CSS Animation and Transition practice</p>
+                </div>
+                <div class="tab__content" data-target="feature">
+                  <ul>
+                    <li>Most of the shapes are made using CSS</li>
+                    <li>The animation are coded with CSS animation</li>
+                    <li>Sky colour transition with Javascript on click event</li>
+                  </ul>
+                </div>
+                <div class="tab__content" data-target="challenge">
+                  <p><b>Challenges: </b>One of the biggest challenges in this project was coding the shapes themselves. Creating precise shapes with only CSS took a lot of trial and error</p>
+                  <p><b>Solutions: </b>To manage this, I tackled the project piece by piece, coding each element patiently. For the shapes I couldn't quite get right with CSS alone, I used actual images as a workaround. In the end, I was able to complete everything on time.</p>
+                  <p>Despite the challenges, I found the process really fun. One of my favorite parts of the project is the sky animation — the sky colour changes dynamically based on the position of the sun.</p>
+                </div>
               </div>
+            </div>
+            <div class="project__info project__links">
+              <a href="https://github.com/NgocTo/CSS-Animation" target="_blank">Github</a>
+              <a href="https://ngocto.github.io/CSS-Animation/" target="_blank">See project</a>
             </div>
           </div>
         </div>
