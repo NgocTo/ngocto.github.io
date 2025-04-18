@@ -174,7 +174,11 @@ a:hover {
 
 .profile__container {
   position: relative;
-  margin: 3.5em 0;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem
 }
 .profile__image-container  {
   display: flex;
@@ -188,9 +192,6 @@ a:hover {
   overflow: hidden;
 }
 .profile__contact {
-  position: absolute;
-  width: 100%;
-  bottom: -60px;
   text-align: center;
 }
 
@@ -418,6 +419,10 @@ main:before {
   padding: 1rem 0.5rem;
   z-index: 0;
 }
+.wrap.wrap__art-page {
+  display: block;
+  max-width: initial;
+}
 
 .card {
   position: relative;
@@ -575,8 +580,8 @@ main:before {
   transform: scale(1.05);
 }
 .artwork__item:hover .artwork__info {
-  top: 10%;
-  opacity: 1;
+  top: 0;
+  opacity: 0.7;
 }
 .artwork__item:hover img  {
 	animation: flash 1.5s;
@@ -814,9 +819,6 @@ footer a, footer a:visited {
     max-width: 80%;
     grid-template-columns: min-content auto;
   }
-  .wrap__art-page {
-    max-width: 80%;
-  }
   .card {
     padding: 1rem;
   }
@@ -888,8 +890,5 @@ footer a, footer a:visited {
   #artworks.card,
   #profile.card {
     padding: 1rem 2rem;
-  }
-  .wrap__art-page .card {
-    padding: 1rem;
   }
 }
