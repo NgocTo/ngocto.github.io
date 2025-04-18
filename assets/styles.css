@@ -155,7 +155,7 @@ a:hover {
   margin: 5px;
   text-align: center;
   color: black;
-  background-color: #e4a5af;
+  background-color: lightgray;
 }
 
 .hide {
@@ -607,7 +607,7 @@ main:before {
 }
 
 .card.project__item {
-  margin: 0.5rem 0;
+  margin: 2rem 0;
   padding: 0;
   max-width: initial;
 }
@@ -635,6 +635,7 @@ main:before {
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: white;
   background-color: #404564;
   cursor: pointer;
@@ -819,6 +820,11 @@ footer a, footer a:visited {
   .card {
     padding: 1rem;
   }
+  
+  .card.project__item {
+    margin: 2rem 0 3rem;
+  }
+
   .artwork__container {
     grid-template-columns: auto auto;
   }
@@ -839,6 +845,11 @@ footer a, footer a:visited {
   .wrap {
     padding: 4rem 1rem;
   }
+  
+  .card.project__item {
+    margin: 3rem 0 4rem;
+  }
+
   .project__item {
     flex-basis: 47%;
   }
@@ -847,6 +858,11 @@ footer a, footer a:visited {
   main {
     width: 80%;
   }
+  
+  .card.project__item {
+    margin: 3rem 0 5rem;
+  }
+
   .artwork__container {
     grid-template-columns: auto auto auto;
   }

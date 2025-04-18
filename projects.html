@@ -143,9 +143,9 @@
               <div class="pill">CSS</div>
               <div class="pill">JS</div>
             </div>
-            <a href="" target="_blank">
+            <div class="project__info">
               <img src="images/web-animation.png" alt="responsive image of animation project">
-            </a>
+            </div>
             <div class="project__info">
               <div class="tab">
                 <div class="tab__links">
@@ -176,62 +176,127 @@
             </div>
           </div>
         </div>
-        <div id="unity" class="project__container card hide" data-target="unity">
+        <div id="unity" class="project__container hide" data-target="unity">
           <h3>Unity</h3>
-          <div class="project__item">
-            <a href="https://narynne.itch.io/candyland" target="_blank">
-              <img src="images/unity-candyland.png" alt="Unity Engine - Candy Land">
-            </a>
+          <div class="project__item card">
+            <h4 class="project__title">Candy Land</h4>
+            <div class="pills">
+              <div class="pill">Unity</div>
+              <div class="pill">C#</div>
+              <div class="pill">2D</div>
+            </div>
             <div class="project__info">
-              <h4 class="project__title">
-                Candy Land
-                <svg class="icon project__expand-button" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-arrow-down"></use>
-                </svg>
-              </h4>
-              <div class="project__description">
-                <p>Unity game project that is similar to Flappy Bird. Avoid all the obstacles flying at you!</p>
+              <img src="images/unity-candyland.png" alt="Unity Engine - Candy Land">
+            </div>
+            <div class="project__info">
+              <div class="tab">
+                <div class="tab__links">
+                  <div class="tab__link active" data-trigger="overview">Overview</div>
+                  <div class="tab__link" data-trigger="feature">MVP Features</div>
+                  <div class="tab__link" data-trigger="challenge">Challenges & Solutions</div>
+                </div>
+                <div class="tab__content active" data-target="overview">
+                  <p>A practice Unity game project that is similar to Flappy Bird.</p>
+                </div>
+                <div class="tab__content" data-target="feature">
+                  <ul>
+                    <li>Tap or click to make the candy bird flap and stay airborne</li>
+                    <li>Avoid obstacles by navigating through the gaps</li>
+                    <li>The game is available online or on PC with scalable resolution/fullscreen</li>
+                  </ul>
+                </div>
+                <div class="tab__content" data-target="challenge">
+                  <p><b>Challenges: </b>As someone new to Unity, it was overwhelming at first to structure the code in a clean and manageable way. Managing game logic, transitions, and organizing scripts across scenes quickly got messy.</p>
+                  <p><b>Solutions: </b>I followed the in class example to grasp the logic behind the code. While the structure wasn't perfect, the process helped me understand better ways to organize things for my future projects.</p>
+                  <p><b>Challenges: </b>I ended up adding a lot of visual elements, which made it harder to manage and optimize the game within the deadline. I couldn't fine-tune every corner of the gameplay.</p>
+                  <p><b>Solutions: </b>I focused on what mattered most—getting a playable, visually appealing game ready and got it finished. Even though the project took longer than it was supposed to, I was very happy with the result of the parallax that I planned out.</p>
+                </div>
               </div>
             </div>
+            <div class="project__info project__links">
+              <a href="https://narynne.itch.io/candyland" target="_blank">See project</a>
+            </div>
           </div>
-          <div class="project__item">
-            <a href="https://narynne.itch.io/shipassault" target="_blank">
-              <img src="images/unity-shipassault.png" alt="Unity Engine - Ship Assault">
-            </a>
+          <div class="project__item card">
+            <h4 class="project__title">Ship Assault</h4>
+            <div class="pills">
+              <div class="pill">Unity</div>
+              <div class="pill">C#</div>
+              <div class="pill">2D</div>
+            </div>
             <div class="project__info">
-              <h4 class="project__title">
-                Ship Assault
-                <svg class="icon project__expand-button" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-arrow-down"></use>
-                </svg>
-              </h4>
-              <div class="project__description">
-                <p>Unity game project that focuses on 2D control and shooting at enemies.</p>
+              <img src="images/unity-shipassault.png" alt="Unity Engine - Ship Assault">
+            </div>
+            <div class="project__info">
+              <div class="tab">
+                <div class="tab__links">
+                  <div class="tab__link active" data-trigger="overview">Overview</div>
+                  <div class="tab__link" data-trigger="feature">MVP Features</div>
+                  <div class="tab__link" data-trigger="challenge">Challenges & Solutions</div>
+                </div>
+                <div class="tab__content active" data-target="overview">
+                  <p>Unity game project that focuses on 2D control and shooting at enemies.</p>
+                </div>
+                <div class="tab__content" data-target="feature">
+                  <ul>
+                    <li>Player controls ship in a 2D water-based map.</li>
+                    <li>Enemy ships spawn in waves. Player gains points by shooting down the enemy ship.</li>
+                    <li>Players can choose the game's difficulty level, which affects how fast and how many enemy ships appear.</li>
+                    <li>The map layout is carefully designed with obstacles and aesthetic details.</li>
+                    <li>Explosion sprites are triggered upon enemy ship destruction.</li>
+                  </ul>
+                </div>
+                <div class="tab__content" data-target="challenge">
+                  <p><b>Challenges: </b>Initially, making the ship rotate smoothly based on player input was tricky. I wanted the ship to feel responsive but natural, avoiding stiff or awkward movement.</p>
+                  <p><b>Solutions: </b>I watched multiple tutorials on YouTube, and reviewed demo code from class. After trial and error, I implemented a solution that resulted in smooth rotation based on directional input. It really gave the movement a more polished touch.</p>
+                  
+                  <p><b>Challenges: </b>Due to the stage layout I built, I noticed the gameplay was too easy at certain points even at high difficulty. The enemy ships couldn't navigate around the environment well.</p>
+                  <p><b>Solutions: </b>I tried several online tutorials and AI navigation methods, including Unity's built-in NavMesh and alternative 2D pathfinding solutions. Unfortunately, I couldn't get it fully working before the deadline. After submission, I reached out to my professor, but we didn't get the chance to go through the code. Even though it's unfinished, it's an area I'm motivated to improve in for future projects.</p>
+                </div>
               </div>
+            </div>
+            <div class="project__info project__links">
+              <a href="https://narynne.itch.io/shipassault" target="_blank">See project</a>
             </div>
           </div>
         </div>
         
-        <div id="java" class="project__container card hide" data-target="java">
+        <div id="java" class="project__container hide" data-target="java">
           <h3>Java</h3>
-          <div class="project__item">
-            <a>
-              <img src="images/java-calculator.jpg" alt="Student Loan Calculator">
-            </a>
+          <div class="project__item card">
+            <h4 class="project__title">Student Loan Calculator</h4>
+            <div class="pills">
+              <div class="pill">Java</div>
+              <div class="pill">JavaSwing</div>
+            </div>
             <div class="project__info">
-              <h4 class="project__title">
-                Student Loan Calculator
-                <svg class="icon project__expand-button" aria-hidden="true" focusable="false">
-                  <use href="images/icons.svg#icon-arrow-down"></use>
-                </svg>
-              </h4>
-              <div class="project__description">
-                <p>A calculator written in Java with GUI built on Java Swing</p>
+              <img src="images/java-calculator.jpg" alt="Student Loan Calculator">
+            </div>
+            <div class="project__info">
+              <div class="tab">
+                <div class="tab__links">
+                  <div class="tab__link active" data-trigger="overview">Overview</div>
+                  <div class="tab__link" data-trigger="feature">MVP Features</div>
+                  <div class="tab__link" data-trigger="challenge">Challenges & Solutions</div>
+                </div>
+                <div class="tab__content active" data-target="overview">
+                  <p>A student loan calculator</p>
+                </div>
+                <div class="tab__content" data-target="feature">
+                  <ul>
+                    <li></li>
+                  </ul>
+                </div>
+                <div class="tab__content" data-target="challenge">
+                  <p><b>Challenges: </b></p>
+                  <p><b>Solutions: </b></b></p>
+                </div>
+                
               </div>
             </div>
           </div>
         </div>
-        <div id="cpp" class="project__container card hide" data-target="cpp">
+        <div id="cpp" class="project__container hide" data-target="cpp">
           <h3>C++</h3>
             <p class="center">Coming Soon...</p>
         </div>
@@ -301,7 +366,7 @@
             </li>
         </ul>
       </nav>
-      <p>© Copyright NgocTo, 2024. All rights reserved.</p>
+      <p>© Copyright NgocTo, 2025. All rights reserved.</p>
     </div>
   </footer>
   
