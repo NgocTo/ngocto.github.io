@@ -135,7 +135,7 @@ b {
 
 a, a:visited {
   color: #384695;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 
 a:hover {
@@ -615,9 +615,6 @@ main:before {
   margin: 2rem 0;
   padding: 0;
   max-width: initial;
-}
-.project__item a {
-  display: block;
 }
 .project__info {
   margin: 1.5rem 3rem;
