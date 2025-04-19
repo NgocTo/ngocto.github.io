@@ -12,6 +12,7 @@
   align-items: center;
   transition: opacity .5s ease;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .slide.active {
