@@ -3,13 +3,56 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting…</title>
+    <title>Page not found</title>
+    <link rel="stylesheet" href="assets/styles.css" media="all">
+    <style>
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 20vh;
+        font-size: 5em;
+        color: white;
+      }
+      p {
+        text-align: center;
+        color: white;
+        font-size: 1.125rem;
+      }
+      a, a:visited {
+        color: white;
+      }
+      a:hover {
+        color: #E4A5AF;
+      }
+      .container {
+        position: relative;
+        font-family: Inconsolata, Courier, monospace;
+        max-width: 80%;
+        margin: 0 auto;
+        pointer-events: all;
+      }
+      .subtitle {
+        font-size: 1.5rem;
+      }
+    </style>
     <script>
-      const newPath = window.location.pathname.replace(/^\/portfolio/, '');
-      window.location.replace(newPath || '/');
+      const path = window.location.pathname;
+      if (path.startsWith('/portfolio/')) {
+        const newPath = window.location.pathname.replace(/^\/portfolio/, '');
+        window.location.replace(newPath || '/');
+      }
     </script>
   </head>
   <body>
-    <p>Redirecting…</p>
+    <div id="particles-js"></div>
+    <div class="container">
+      <h1>404</h1>
+      <p class="subtitle"><b>File not found</b></p>
+      <p>The site configured at this address does not contain the requested file.</p>
+      <p>Please go to <a href="/">homepage</a> to find what you are looking for.</p>
+    </div>
+    <script src="assets/lib/particles.min.js"></script>
+    <script src="assets/app.js"></script>
   </body>
 </html>
