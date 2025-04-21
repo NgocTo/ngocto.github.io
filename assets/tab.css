@@ -1,0 +1,53 @@
+
+/* ---- tab ---- */
+.tab {
+  margin-bottom: 1rem;
+}
+.tab__links {
+  display: inline-block;
+  background-color: lightgray;
+}
+
+.tab__link {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color .2s;
+  font-weight: bold;
+  font-family: 'Noto Serif', Cambria, serif;
+  background-color: lightgray;
+}
+
+.tab__link.active {
+  background-color: #e5e5e5;
+}
+
+
+.tab__link:hover {
+  background-color: #F5F5F5;
+}
+
+.tab__content {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: opacity .5s;
+}
+
+.tab__content.active {
+  opacity: 1;
+  visibility: visible;
+  height: initial;
+  padding: 0.5rem 1rem;
+}
+
+.tab__title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tab__content li {
+  list-style: circle;
+  margin-left: 1rem;
+}

@@ -26,28 +26,6 @@ categoryTriggers.forEach((trigger) => {
   })
 });
 
-// Show/hide project description
-const tabTriggers = document.querySelectorAll('.tab__link');
-if (tabTriggers.length > 0) {
-  tabTriggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const container = trigger.parentNode.parentNode;
-      const tabContents = container.querySelectorAll('.tab__content');
-      tabContents.forEach(tab => {
-        tab.classList.remove('active');
-      });
-
-      tabTriggers.forEach(trigger => {
-        trigger.classList.remove('active');
-      })
-
-      let target = trigger.dataset.trigger;
-      let tabContent = container.querySelector(`.tab__content[data-target=${target}]`);
-        tabContent.classList.add('active');
-        trigger.classList.add('active');
-    });
-  });
-}
 
 // Scroll animation
 let progressBar = document.querySelector('.timeline__progress');

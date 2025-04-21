@@ -255,57 +255,6 @@ header a:hover {
   width: 1.1em;
 }
 
-/* ---- tab ---- */
-.tab {
-  margin-bottom: 1rem;
-}
-.tab__links {
-  background-color: lightgray;
-}
-
-.tab__link {
-  display: inline-block;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color .2s;
-  font-weight: bold;
-  font-family: 'Noto Serif', Cambria, serif;
-}
-
-.tab__link.active {
-  background-color: #F5F5F5;
-}
-
-
-.tab__link:hover {
-  background-color: #e5e5e5;
-}
-
-.tab__content {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  transition: opacity .5s;
-}
-
-.tab__content.active {
-  opacity: 1;
-  visibility: visible;
-  height: initial;
-  padding: 0.5rem 1rem;
-}
-
-.tab__title {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.tab__content li {
-  list-style: circle;
-  margin-left: 1rem;
-}
-
 /* ---- nav hover animation ---- */
 .hover-effect a::before,
 .hover-effect a::after {
@@ -650,10 +599,14 @@ main:before {
 }
 .project__links {
   text-align: center;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .project__links a {
   display: inline-block;
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 1rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -662,6 +615,7 @@ main:before {
   background-color: #e4a5af;
   border: 2px solid #404564;
   opacity: 1;
+  width: 8rem;
 }
 .project__links a:hover {
   animation: flash 1.5s;
