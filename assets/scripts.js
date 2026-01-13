@@ -13,18 +13,37 @@ setProgress();
 // Show/hide category
 const categoryTriggers = document.querySelectorAll('.list-circle__item')
 const categories = document.querySelectorAll('.project__container');
+
+function showCategory(target) {
+  categories.forEach((category) => {
+    if (category.dataset.target === target) {
+      category.classList.remove('hide');
+    } else {
+      category.classList.add('hide');
+    }
+  });
+}
+
 categoryTriggers.forEach((trigger) => {
   trigger.addEventListener('click', () => {
     let target = trigger.dataset.trigger;
-    categories.forEach((category) => {
-      if (category.dataset.target === target) {
-        category.classList.remove('hide');
-      } else {
-        category.classList.add('hide');
-      }
-    });
+    showCategory(target);
   })
 });
+
+// Handle URL hash to show category on page load and hash change
+function handleHashChange() {
+  let hash = window.location.hash.substring(1);
+  if (hash) {
+    showCategory(hash);
+  }
+}
+
+// Show category on page load if hash exists
+handleHashChange();
+
+// Listen for hash changes (back/forward buttons, link clicks)
+window.addEventListener('hashchange', handleHashChange);
 
 
 // Scroll animation
