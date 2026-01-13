@@ -421,6 +421,24 @@ main:before {
   display: block;
 }
 
+/* ---- image grid ---- */
+.grid__image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.grid__image .grid__image-container {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.grid__image img {
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ---- skills section ---- */
 .list-circle {
@@ -789,6 +807,9 @@ footer a, footer a:visited {
   .profile__image-container  {
     width: 8em;
     height: 8em;
+  }
+  .grid__image .grid__image-container {
+    width: 48%;
   }
 }
 
