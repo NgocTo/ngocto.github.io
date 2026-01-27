@@ -467,6 +467,7 @@ main:before {
   text-align: center;
   font-weight: 700;
   font-size: 1em;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -762,7 +763,7 @@ footer a, footer a:visited {
   }
   
   .list-circle__text {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 
